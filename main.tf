@@ -3,7 +3,7 @@ data "azurerm_resource_group" "rg" {
 }
 
 data "azurerm_virtual_network" "vnet" {
-  name = "sandbox-vnet-delete"
+  name                = "sandbox-vnet-delete"
   resource_group_name = data.azurerm_resource_group.rg.name
 }
 
@@ -16,14 +16,14 @@ locals {
     tst = var.deploy_env == "tst" ? false : true
     uat = var.deploy_env == "uat" ? false : true
     prd = true
-  },
+    },
   var.deploy_env, false)
 }
 
 # lookup(map, key, default)
 
 resource "azurerm_subnet" "endpoint-subnet" {
-  count = local.create_network ? 1 : 0
+  count                = local.create_network ? 1 : 0
   name                 = "vsad-${var.env}-${var.proj}-pe-subnet"
   resource_group_name  = data.azurerm_resource_group.rg.name
   virtual_network_name = data.azurerm_virtual_network.vnet.name
