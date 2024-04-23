@@ -1,7 +1,7 @@
-env     = "p"
-region  = "auea"
-company = "sa"
-proj    = "sandbox"
+env        = "p"
+region     = "auea"
+company    = "sa"
+proj       = "sandbox"
 deploy_env = "dev"
 extra_tags = {
   ENV = "DEV"
