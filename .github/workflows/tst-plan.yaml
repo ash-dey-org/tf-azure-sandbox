@@ -3,7 +3,7 @@ name: "TstPlan"
 on:
   pull_request:
     branches:
-      - test-ignore
+      - test
     types:
       - opened
       - reopened

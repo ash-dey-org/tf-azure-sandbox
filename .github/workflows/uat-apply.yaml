@@ -3,7 +3,7 @@ name: "UatApply"
 on:
   pull_request:
     branches:
-      - uat-ignore
+      - uat
     types:
       - closed
   #    - reopened
